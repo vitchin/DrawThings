@@ -2,40 +2,40 @@
 
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react"
-import {ChevronLeft, ChevronRight, Scissors, Syringe, CarTaxiFront, Hotel, Clock} from "lucide-react"
-import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr"
+import {ChevronLeft, ChevronRight, Brush, PenTool, Square, Truck, Clock} from "lucide-react"
+import { WhatsappLogo, TagChevronIcon } from "@phosphor-icons/react/dist/ssr"
 
-const services = [
+const products = [
     {
         id: 1,
-        title: "Banho",
-        description: "Serviço de banho completo com produtos de alta qualidade.",
-        duration: "1 hora",
-        price: "R$ 50,00",
-        icon: <Scissors />,
-        linkText: "Agendar banho",
+        title: "Quadro para Pintura",
+        description: "Quadro profissional em tela de algodão, ideal para pinturas em óleo ou acrílica.",
+        delivery: "Entrega em até 5 dias úteis",
+        price: "R$ 120,00",
+        icon: <Square />,
+        linkText: "Comprar quadro",
     },
     {
         id: 2,
-        title: "Tosa",
-        description: "Tosa higiênica e estética, com profissionais qualificados.",
-        duration: "1 hora e 30 minutos",
-        price: "R$ 80,00",
-        icon: <Syringe />,
-        linkText: "Agendar tosa",
+        title: "Pincel Profissional",
+        description: "Pincel de cerdas naturais, perfeito para detalhes e acabamentos precisos.",
+        delivery: "Entrega em até 3 dias úteis",
+        price: "R$ 35,00",
+        icon: <Brush />,
+        linkText: "Comprar pincel",
     },
     {
         id: 3,
-        title: "Transporte",
-        description: "Transporte seguro e confortável para o seu pet.",
-        duration: "Variável",
-        price: "R$ 30,00",
-        icon: <CarTaxiFront />,
-        linkText: "Agendar transporte",
+        title: "Caneta Nanquim",
+        description: "Caneta nanquim resistente à água, ideal para ilustrações e desenhos técnicos.",
+        delivery: "Entrega em até 2 dias úteis",
+        price: "R$ 25,00",
+        icon: <PenTool />,
+        linkText: "Comprar caneta",
     }
 ]
 
-export function Services() {
+export function Products() {
     
     const  [emblaRef, emblaApi] = useEmblaCarousel({
         loop: false,
@@ -55,42 +55,43 @@ export function Services() {
     }
 
     return(
-        <section className="bg-white py-16">
+        <section className="relative bg w-full py-16 flex flex-col items-center justify-center">
 
-            <div className="container mx-auto px-4">
-                <h2 className="font-bold text-4xl mb-12">Serviços</h2>
+            <div className="container mx-auto px-4 flex flex-col items-center justify-center">
 
-                <div className="relative">
-                     {/*aqui vai ter um carrossel*/}
+                <h2 id="overflowProdutos" className="font-bold text-4xl text-center pb-8">Produtos</h2>
+
+                <div className="relative w-full">
+                    {/* Carrossel de produtos */}
                     
-                    <div className="overflow-hidden" ref={emblaRef}>
+                    <div className="overflow-hidden py-4" ref={emblaRef}>
                         <div className="flex">
                             
-                            {services.map((item, index) => (
-                               <div key={index} className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3">
-
-                                    <article className="bg-[#1E293B] text-white rounded-2xl p-6 space-y-4 h-full flex flex-col justify-between">
+                            {products.map((item, index) => (
+                               <div key={index} className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3 ">
+                                    <article className="bg-[#554a3b] text-white shadow-lg rounded-2xl p-6 space-y-4 h-60 flex flex-col justify-between">
                                         <div className="flex-1 flex items-start justify-between">
                                             <div className="flex gap-4 justify-start items-center">
                                                 <span className="text-3xl select-none">{item.icon}</span>
                                                 <div>
                                                     <h3 className="font-bold text-xl my-1 select-none">{item.title}</h3>
-                                                    <p className="text-gray-400 text-sm select-none">
+                                                    <p className="text-white text-sm select-none">
                                                         {item.description}
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div className="border-t border-gray-700 pt-4 flex items-center justify-between select-none">
+                                        <div className="border-t border-gray-100 pt-4 flex items-center justify-between select-none">
                                             <div className="flex items-center gap-2 text-sm">
-                                                <Clock className="w-5 h-5" />
-                                                <span>{item.duration}</span>
+                                                <Truck className="w-5 h-5" />
+                                                <span>{item.delivery}</span>
                                             </div>
+                                            <span className="font-bold">{item.price}</span>
                                         </div>
 
-                                        <a href="#" className="h-10 flex items-center justify-center gap-2 hover:bg-red-500 px-4 py-1 rounded-md duration-300">
-                                            Entrar em contato
+                                        <a href="#" className="h-10 flex items-center justify-center gap-2 hover:bg-[#E84c3D] hover:text-white px-4 py-1 rounded-md duration-300">
+                                            Comprar agora
                                             <WhatsappLogo className="w-5 h-5" />
                                         </a>
                                     </article>

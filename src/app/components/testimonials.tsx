@@ -2,28 +2,27 @@
 
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react"
-import {ChevronLeft, ChevronRight, Scissors, Syringe, CarTaxiFront, Hotel, Clock} from "lucide-react"
-import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr"
+import {ChevronLeft, ChevronRight} from "lucide-react"
 import tutor1 from "../../../public/tutor1.png";
 import tutor2 from "../../../public/Geovanna.png";
 
 const testimonials = [
     {
-        content: "O serviço de banho e tosa foi excelente! Meu cachorro saiu limpo, cheiroso e muito feliz. Os profissionais foram super atenciosos, explicaram todo o processo e deram dicas de cuidados para o dia a dia. Recomendo muito para quem busca qualidade e carinho com os pets!",
-        author: "Maria Silva",
-        role: "tutora do Rex (Shih Tzu)",
+        content: "Comprei um quadro para pintura e fiquei impressionada com a qualidade da tela e da estrutura. O atendimento foi excelente e o produto chegou bem embalado, dentro do prazo. Recomendo para quem busca materiais profissionais!",
+        author: "Beatriz Lima",
+        role: "Artista Plástica",
         image: tutor2,
     },
     {
-        content: "Meu gato estava precisando de um banho e tosa, e fiquei muito satisfeita com o atendimento. A equipe foi paciente, cuidadosa e deixou a Luna tranquila durante todo o procedimento. O resultado ficou ótimo e com certeza voltarei outras vezes!",
-        author: "Ana Souza",
-        role: "tutora da Luna (Persa)",
-        image: tutor2,
+        content: "Os pincéis são incríveis! As cerdas são macias e perfeitas para detalhes. A loja foi super ágil na entrega e ainda me enviaram dicas de conservação dos materiais. Com certeza voltarei a comprar.",
+        author: "Carlos Mendes",
+        role: "Ilustrador",
+        image: tutor1,
     },
     {
-        content: "A equipe é muito profissional e cuidadosa. Meu cachorro sempre sai feliz, bem tratado e com o pelo impecável. Gosto muito da atenção que dão aos detalhes e da preocupação com o bem-estar dos animais. Serviço de confiança!",
-        author: "João Pereira",
-        role: "tutor do Max (Golden Retriever)",
+        content: "A caneta nanquim tem uma precisão fantástica e não borra. Fiquei muito satisfeito com a experiência de compra, desde o site até o acompanhamento da entrega. Recomendo para quem valoriza produtos de qualidade.",
+        author: "Juliana Souza",
+        role: "Designer Gráfica",
         image: tutor1,
     },
 ]
@@ -43,59 +42,47 @@ export function Testimonials() {
     }
 
     return(
-        <section className="bg-[#FFD449] py-16">
-
+        <section className="bg-[#443131] py-16">
             <div className="container mx-auto px-4">
-                <h2 className="text-center font-bold text-4xl mb-12">Recomendações dos nossos clientes</h2>
+                <h2 className="text-center font-bold text-4xl mb-12 text-white">Depoimentos de clientes</h2>
 
                 <div className="relative max-w-4xl mx-auto">
-                     {/*aqui vai ter um carrossel*/}
-                    
-                    <div className="overflow-hidden" ref={emblaRef}>
+                    {/* Carrossel de depoimentos */}
+                    <div className="overflow-hidden py-4" ref={emblaRef}>
                         <div className="flex">
-                            
                             {testimonials.map((item, index) => (
                                <div key={index} className="flex-[0_0_100%] min-w-0 px-3">
-
-                                    <article className="bg-[#1E293B] text-white rounded-2xl p-6 space-y-4 h-full flex flex-col justify-between">
-                                            <div className="flex flex-col items-center text-center space-y-4">
-                                                <div className="relative w-24 h-24">
-                                                    <Image
-                                                        src={item.image}
-                                                        alt={item.author}
-                                                        fill
-                                                        sizes="96px"
-                                                        className="rounded-full object-cover"
-                                                        quality={100}
-                                                    />
-                                                </div>
-
-                                                <p className="text-gray-200">{item.content}</p>
-                                                
-                                                <div>
-                                                    <p className="font-bold">{item.author}</p>
-                                                    <p className="text-sm text-gray-400">{item.role}</p>
-                                                </div>
+                                    <article className="bg-[#1b110e] text-white rounded-2xl p-8 space-y-6 h-full flex flex-col justify-between shadow-lg">
+                                        <div className="flex flex-col items-center text-center space-y-4">
+                                            <div className="relative w-24 h-24">
+                                                <Image
+                                                    src={item.image}
+                                                    alt={item.author}
+                                                    fill
+                                                    sizes="96px"
+                                                    className="rounded-full object-cover"
+                                                    quality={100}
+                                                />
                                             </div>
+                                            <p className="text-gray-200 text-base">{item.content}</p>
+                                            <div>
+                                                <p className="font-bold text-lg text-[#FFD449]">{item.author}</p>
+                                                <p className="text-sm text-gray-400">{item.role}</p>
+                                            </div>
+                                        </div>
                                     </article>
-
                                </div> 
                             ))}
-
                         </div>
                     </div>
-
-                    <button onClick={scrollPrev} className="bg-white flex items-center justify-center rounded-full shadow-lg w-10 h-10 absolute left-3 translate-y-1/2 -translate-x-1/2 top-1/3 z-10">
-                        <ChevronLeft className="w-6 h-6 text-gray-600" />
+                    <button onClick={scrollPrev} className="bg-white flex items-center justify-center rounded-full shadow-lg w-12 h-12 absolute left-3 translate-y-1/2 -translate-x-1/2 top-1/3 z-10">
+                        <ChevronLeft className="w-7 h-7 text-[#443131]" />
                     </button>
-
-                    <button onClick={scrollNext} className="bg-white flex items-center justify-center rounded-full shadow-lg w-10 h-10 absolute -right-6 translate-y-1/2 -translate-x-1/2 top-1/3 z-10">
-                        <ChevronRight className="w-6 h-6 text-gray-600" />
+                    <button onClick={scrollNext} className="bg-white flex items-center justify-center rounded-full shadow-lg w-12 h-12 absolute -right-6 translate-y-1/2 -translate-x-1/2 top-1/3 z-10">
+                        <ChevronRight className="w-7 h-7 text-[#443131]" />
                     </button>
                 </div>
-
             </div>
-
         </section>
     )
 }

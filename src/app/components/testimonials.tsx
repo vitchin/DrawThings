@@ -18,13 +18,7 @@ const testimonials = [
         author: "Carlos Mendes",
         role: "Ilustrador",
         image: tutor1,
-    },
-    {
-        content: "A caneta nanquim tem uma precisão fantástica e não borra. Fiquei muito satisfeito com a experiência de compra, desde o site até o acompanhamento da entrega. Recomendo para quem valoriza produtos de qualidade.",
-        author: "Juliana Souza",
-        role: "Designer Gráfica",
-        image: tutor1,
-    },
+    }
 ]
 
 export function Testimonials() {
@@ -52,7 +46,7 @@ export function Testimonials() {
                         <div className="flex">
                             {testimonials.map((item, index) => (
                                <div key={index} className="flex-[0_0_100%] min-w-0 px-3">
-                                    <article className="bg-[#1b110e] text-white rounded-2xl p-8 space-y-6 h-full flex flex-col justify-between shadow-lg">
+                                    <article className="bg-[#1b110e] text-white rounded-2xl py-8 px-15 space-y-6 h-full flex flex-col justify-between shadow-lg">
                                         <div className="flex flex-col items-center text-center space-y-4">
                                             <div className="relative w-24 h-24">
                                                 <Image

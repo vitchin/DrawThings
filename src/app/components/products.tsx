@@ -3,7 +3,7 @@
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react"
 import {ChevronLeft, ChevronRight, Brush, PenTool, Square, Truck, Clock} from "lucide-react"
-import { WhatsappLogo, TagChevronIcon } from "@phosphor-icons/react/dist/ssr"
+import phone from "../../../public/whatsapp.svg";
 
 const products = [
     {
@@ -69,13 +69,13 @@ export function Products() {
                             
                             {products.map((item, index) => (
                                <div key={index} className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3 ">
-                                    <article className="bg-[#554a3b] text-white shadow-lg rounded-2xl p-6 space-y-4 h-60 flex flex-col justify-between">
+                                    <article className="bg-[#fffcf7] text-gray-950 shadow-lg rounded-2xl py-6 px-10 space-y-4 h-60 flex flex-col justify-between">
                                         <div className="flex-1 flex items-start justify-between">
                                             <div className="flex gap-4 justify-start items-center">
                                                 <span className="text-3xl select-none">{item.icon}</span>
                                                 <div>
                                                     <h3 className="font-bold text-xl my-1 select-none">{item.title}</h3>
-                                                    <p className="text-white text-sm select-none">
+                                                    <p className="text-gray-950 text-sm select-none">
                                                         {item.description}
                                                     </p>
                                                 </div>
@@ -90,9 +90,9 @@ export function Products() {
                                             <span className="font-bold">{item.price}</span>
                                         </div>
 
-                                        <a href="#" className="h-10 flex items-center justify-center gap-2 hover:bg-[#E84c3D] hover:text-white px-4 py-1 rounded-md duration-300">
+                                        <a href="#" className="h-10 flex items-center justify-center gap-2 bg-[#E84c3D] hover:bg-[#a3281d] text-white px-4 py-1 rounded-md duration-300">
                                             Comprar agora
-                                            <WhatsappLogo className="w-5 h-5" />
+                                            <Image src={phone} alt="phoneicon" className="h-5 w-5"/>
                                         </a>
                                     </article>
 

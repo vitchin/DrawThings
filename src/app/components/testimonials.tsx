@@ -69,6 +69,13 @@ export function Testimonials() {
                                                 <p className="font-bold text-lg text-[#FFD449]">{item.author}</p>
                                                 <p className="text-sm text-gray-400">{item.role}</p>
                                             </div>
+                                            <div className="w-full flex flex-row items-center justify-center gap-2">
+                                                <Image src={"/star-fill.svg"} alt="star" width={35} height={35} />
+                                                <Image src={"/star-fill.svg"} alt="star" width={35} height={35} />
+                                                <Image src={"/star-fill.svg"} alt="star" width={35} height={35} />
+                                                <Image src={"/star-fill.svg"} alt="star" width={35} height={35} />
+                                                <Image src={"/star-fill.svg"} alt="star" width={35} height={35} />
+                                            </div>
                                         </div>
                                     </article>
                                </div> 

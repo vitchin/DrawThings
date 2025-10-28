@@ -2,7 +2,7 @@ import Image from "next/image";
 import aboutImg from "../../../public/canetaPapel.jpg";
 import aboutImg2 from "../../../public/materiaisDesenho.jpg";
 import { Check, MapPin } from "lucide-react";
-import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
+import phone from "../../../public/whatsapp.svg";
 
 export function About() {
     return (
@@ -61,8 +61,8 @@ export function About() {
                         </ul>
 
                         <div className="flex gap-2 ">
-                            <a href="#" className="bg-[#E84c3D] text-white flex items-center justify-center w-fit gap-2 px-4 py-2 rounded-md">
-                                <WhatsappLogo className="w-5 h-5 text-white"/>
+                            <a href="#" className="bg-[#E84c3D] hover:bg-[#a3281d] duration-300 text-white flex items-center justify-center w-fit gap-2 px-4 py-2 rounded-md">
+                                <Image src={phone} alt="phoneicon" className="h-5 w-5 text-white"/>
                                 Fale conosco no WhatsApp
                             </a>
 

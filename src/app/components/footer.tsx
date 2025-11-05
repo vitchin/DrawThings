@@ -16,11 +16,11 @@ const brands = [
 
 export function Footer() {
     return (
-        <section className="bg-[#1b110e] py-16 text-white">
+        <section id="SuportSection" className="bg-[#1b110e] py-16 text-white">
             <div className="container mx-auto px-4">
                 <footer className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
                     <div>
-                        <h4 className="text-xl font-bold mb-4 text-[#FFD449]">Loja de Materiais de Arte</h4>
+                        <h4 className="text-xl font-bold mb-4 text-[#FFD449]">Loja de arte</h4>
                         <p className="text-gray-200 mb-2">
                             Inspiração e qualidade para artistas de todos os níveis. Produtos selecionados, entrega rápida e atendimento especializado.
                         </p>
@@ -31,7 +31,7 @@ export function Footer() {
                     <div>
                         <h4 className="text-lg font-semibold mb-4 text-[#FFD449]">Contato</h4>
                         <ul className="space-y-2 text-gray-200">
-                            <li>Email: contato@materiaisdearte.com.br</li>
+                            <li>Email: contato@drawthings.com.br</li>
                             <li>WhatsApp: (11) 99999-9999</li>
                             <li>Endereço: Rua da Criatividade, 123 - São Paulo/SP</li>
                         </ul>

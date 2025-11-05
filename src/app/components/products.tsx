@@ -55,7 +55,7 @@ export function Products() {
     }
 
     return(
-        <section className="relative bg w-full py-16 flex flex-col items-center justify-center">
+        <section id="ProductSection" className="relative bg w-full py-16 flex flex-col items-center justify-center">
 
             <div className="container mx-auto px-4 flex flex-col items-center justify-center">
 

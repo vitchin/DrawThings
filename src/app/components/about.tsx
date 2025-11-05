@@ -36,7 +36,7 @@ export function About() {
                     
                     </div>
 
-                    <div className="space-y-6 mt-10">
+                    <div id="aboutSection" className="space-y-6 mt-10">
                         <h2 className="text-4xl font-bold">Sobre a loja</h2>
 
                         <p>

@@ -1,58 +1,55 @@
-import {TagChevronIcon} from "@phosphor-icons/react/dist/ssr";
+import { TagChevronIcon } from "@phosphor-icons/react/dist/ssr";
 import drawhand from "../../../public/hero.jpg";
-import percent from "../../../public/percent.png";
 import phone from "../../../public/whatsapp.svg";
 import Image from "next/image";
 
-
-
 export function Hero() {
-    return (
-        <section className="bg-[#ffffff] shadow-lg text-[#752f00] relative overflow-hidden items-center justify-center flex flex-col h-fit">
+  return (
+    <section className="relative overflow-hidden text-[#752f00] flex flex-col items-center justify-center h-fit">
+      
+      {/* Navbar */}
+      <nav className="fixed top-0 w-full bg-white/70 backdrop-blur-xl border-b border-gray-200 shadow-sm z-50">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-center space-x-10 text-gray-800 text-sm font-medium">
+          <a href="#ProductSection" className="hover:text-gray-900 transition-colors">Produtos</a>
+          <a href="#aboutSection" className="hover:text-gray-900 transition-colors">Sobre a loja</a>
+          <a href="#testimonialSection" className="hover:text-gray-900 transition-colors">Depoimentos</a>
+          <a href="#SuportSection" className="hover:text-gray-900 transition-colors">Suporte</a>
+        </div>
+      </nav>
 
-            <div className="absolute inset-0 w-full h-full">
-                <Image
-                    src={drawhand}
-                    alt="Imagem de materiais de desenho"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
-                    priority
-                    className="object-cover w-full h-full opacity-10 lg:opacity-100 scale-x-[-1]"
-                />
-            </div>
-            
-            <div className="container mx-auto pt-16 pb-16 px-4 relative">
+      {/* Background */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src={drawhand}
+          alt="Materiais de desenho"
+          fill
+          priority
+          className="object-cover w-full h-full scale-x-[-1] opacity-70"
+        />
+        {/* Overlay com gradiente */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white"></div>
+      </div>
 
-                <article className="lg:w-[500px]">
-                    <div className="space-y-6">
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-10 select-none pointer-events-none">
-                            Inspire sua criatividade com os melhores materiais de desenho!
-                        </h1>
-                        <p className="lg:text-lg leading-5">
-                            Lápis, papéis, tintas e acessórios para artistas de todos os níveis. Produtos de alta qualidade para transformar suas ideias em arte!
-                        </p>
-                        <div>
-                            <a href="#"
-                            className="bg-[#e94d4d] hover:bg-[#a3281d] duration-300 text-white text-xl w-full h-16 shadow-md px-5 py-2 rounded-[50px] font-semibold flex items-center justify-center gap-2">
-                                <Image src={phone} alt="phoneicon" className="h-5 w-5 text-white"/>
-                                Fale conosco no WhatsApp
-                            </a>
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <div className="pb-4">
-                <a href="#overflowProdutos" className="mb-4 flex items-center justify-center animate-bounce">
-                    <TagChevronIcon className="w-8 h-8 text-[#752f00]" style={{ transform: "rotate(90deg)" }}/>
-                </a>
-
-                <p className="text-white text-center">Confira nossos produtos</p>
-            </div>
-
-        </section>
-    )
+      {/* Conteúdo */}
+      <div className="container mx-auto pt-[120px] pb-20 px-4 relative">
+        <article className="lg:w-[520px] space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+            Inspire sua criatividade com os melhores materiais de desenho!
+          </h1>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Lápis, papéis, tintas e acessórios para artistas de todos os níveis. Produtos de alta qualidade para transformar suas ideias em arte.
+          </p>
+          <div>
+            <a
+              href="#"
+              className="bg-[#e94d4d] hover:bg-[#b22e25] transition-all duration-300 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg flex items-center justify-center gap-2"
+            >
+              <Image src={phone} alt="WhatsApp" className="h-5 w-5" />
+              Fale conosco no WhatsApp
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  );
 }

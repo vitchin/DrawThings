@@ -31,7 +31,7 @@ export function Footer() {
                     <div>
                         <h4 className="text-lg font-semibold mb-4 text-[#FFD449]">Contato</h4>
                         <ul className="space-y-2 text-gray-200">
-                            <li>Email: contato@drawthings.com.br</li>
+                            <li>Email: contato@lojadearte.com.br</li>
                             <li>WhatsApp: (11) 99999-9999</li>
                             <li>Endereço: Rua da Criatividade, 123 - São Paulo/SP</li>
                         </ul>

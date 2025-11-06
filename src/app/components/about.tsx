@@ -6,7 +6,7 @@ import phone from "../../../public/whatsapp.svg";
 
 export function About() {
     return (
-        <section className="bg-[#f7ebd9] py-16">
+        <section id="aboutSection" className="bg-[#f7ebd9] py-16">
             <div className="container px-4 mx-auto">
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -36,7 +36,7 @@ export function About() {
                     
                     </div>
 
-                    <div id="aboutSection" className="space-y-6 mt-10">
+                    <div className="space-y-6 mt-10">
                         <h2 className="text-4xl font-bold">Sobre a loja</h2>
 
                         <p>

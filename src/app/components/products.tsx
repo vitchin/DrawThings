@@ -69,7 +69,7 @@ export function Products() {
                             
                             {products.map((item, index) => (
                                <div key={index} className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3 ">
-                                    <article className="bg-[#fffcf7] text-gray-950 shadow-lg rounded-2xl py-6 px-10 space-y-4 h-60 flex flex-col justify-between">
+                                    <article className="bg-[#fffcf7] text-gray-950 shadow-lg rounded-2xl py-6 px-10 space-y-4 min-h-60 flex flex-col justify-between">
                                         <div className="flex-1 flex items-start justify-between">
                                             <div className="flex gap-4 justify-start items-center">
                                                 <span className="text-3xl select-none">{item.icon}</span>

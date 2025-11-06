@@ -1,5 +1,5 @@
 import { TagChevronIcon } from "@phosphor-icons/react/dist/ssr";
-import drawhand from "../../../public/hero.jpg";
+import drawhand from "../../../public/hero.png";
 import phone from "../../../public/whatsapp.svg";
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ export function Hero() {
           alt="Materiais de desenho"
           fill
           priority
-          className="object-cover w-full h-full scale-x-[-1] opacity-70"
+          className="object-cover w-full h-full scale-x-[-1] opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white"></div>
       </div>

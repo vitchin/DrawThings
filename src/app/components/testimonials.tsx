@@ -36,11 +36,11 @@ export function Testimonials() {
     }
 
     return(
-        <section id="testimonialSection" className="bg-[#443131] py-16">
+        <section id="testimonialSection" className="relative bg-[#443131] py-16">
             <div className="container mx-auto px-4">
                 <h2 className="text-center font-bold text-4xl mb-12 text-white">Depoimentos de clientes</h2>
 
-                <div className="relative max-w-4xl mx-auto">
+                <div className="relative max-w-4xl mx-auto z-20">
                     {/* Carrossel de depoimentos */}
                     <div className="overflow-hidden py-4" ref={emblaRef}>
                         <div className="flex">
@@ -84,6 +84,7 @@ export function Testimonials() {
                     </button>
                 </div>
             </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0e0908]/50 to-[#0e0908]/100 opacity-100"></div>
         </section>
     )
 }

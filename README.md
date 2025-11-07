@@ -1,7 +1,5 @@
 # Landing Page da Loja de Arte
 
-## Visão Geral
-
 Este é um projeto de estudo que apresenta uma landing page para uma loja de arte e materiais de desenho. O principal objetivo é aprimorar as habilidades de desenvolvimento front-end, com foco na criação de interfaces de usuário atraentes e responsivas.
 
 ## Tecnologias Utilizadas
